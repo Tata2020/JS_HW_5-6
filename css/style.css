@@ -1,0 +1,48 @@
+body {
+	font-family: verdana, 'sans serif';
+	background: #cecece;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+}
+.timer__block {
+	margin: 20px auto;
+	width: 600px;
+	padding: 10px;
+	background: #0B023E;
+	border: 2px solid #fff;
+	border-radius: 15px;
+	
+}
+.timer__content {
+	padding: 5px 10px;
+	background: #494877;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	text-align: center;
+}
+.timer__item {
+	font-size: 60px;
+	font-weight: bold;
+	color: #cecece;
+}
+
+.button__block {
+	margin: 20px auto;
+	width: 600px;
+}
+input[type="button"] {
+	background: #1C2377;
+	padding: 10px 50px;
+	border: 1px solid #4A4A4A;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase; 
+}
+input[type="button"]:hover {
+	background: #025809;
+}
