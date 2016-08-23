@@ -10,6 +10,7 @@ function controlTimer () {
   	flag = "pause";
   	startElement.value = flag;
     startElement.style.backgroundColor = '#790808';
+    nowTime = (new Date).getTime();
     startTimer();
     } else  if (flag == "pause") {
     	flag = "go on";
@@ -20,6 +21,7 @@ function controlTimer () {
     	flag = "pause";
     	startElement.value = flag;
       startElement.style.backgroundColor = '#790808';
+      nowTime = (new Date).getTime();
       startTimer();
       }
  } 
@@ -33,9 +35,9 @@ function startTimer() {
   var secTimer = +arr[2];
   var milsecTimer = +arr[3];
 
-  nowTime = (new Date).getMilliseconds()/16;
-  milsecTimer = milsecTimer + Math.round(nowTime);  
-  
+  nowTime = (new Date).getTime() - nowTime;
+  milsecTimer = milsecTimer + nowTime; 
+   
   if (milsecTimer == 999) {
       secTimer = secTimer + 1;
       milsecTimer = 0;
@@ -64,7 +66,8 @@ function startTimer() {
 	timerArr = hoursElement + ':' + minElement + ':' + secElement + ':' + milsecElement;	
 	timerElement = document.body.querySelector('span');
 	timerElement.innerHTML = timerArr;
-	goTimer = setTimeout(startTimer, 16);
+  nowTime = (new Date).getTime();
+	goTimer = setTimeout(startTimer, 10);
 
 }
 
